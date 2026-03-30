@@ -1,0 +1,24 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+personality = "pragmatic"
+web_search = "cached"
+
+project_root_markers = [".git"]
+project_doc_fallback_filenames = ["CLAUDE.md"]
+
+commit_attribution = ""
+
+[features]
+multi_agent = true
+# Hooks を使うなら true にする
+# Windows では現状 hooks は無効
+codex_hooks = false
+
+[sandbox_workspace_write]
+network_access = false
+
+[agents]
+max_threads = 4
+max_depth = 2
